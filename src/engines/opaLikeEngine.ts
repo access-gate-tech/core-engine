@@ -11,16 +11,35 @@ export function evaluatePolicy(
     ...flatten({ subject: request.subject }),
   };
 
+  // First check for deny rules
   for (const rule of policy.rules) {
-    const matched = Object.entries(rule.match).every(([key, val]) => {
-      return matchGlob(val, input[key] || "");
-    });
+    if (rule.effect === "deny") {
+      const matched = Object.entries(rule.match).every(([key, val]) => {
+        return matchGlob(val, input[key] || "");
+      });
 
-    if (matched) {
-      return {
-        allowed: rule.effect === "allow",
-        reason: `matched rule (${rule.effect})`,
-      };
+      if (matched) {
+        return {
+          allowed: false,
+          reason: "matched rule (deny)",
+        };
+      }
+    }
+  }
+
+  // Then check for allow rules
+  for (const rule of policy.rules) {
+    if (rule.effect === "allow") {
+      const matched = Object.entries(rule.match).every(([key, val]) => {
+        return matchGlob(val, input[key] || "");
+      });
+
+      if (matched) {
+        return {
+          allowed: true,
+          reason: "matched rule (allow)",
+        };
+      }
     }
   }
 

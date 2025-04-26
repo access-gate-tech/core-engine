@@ -7,5 +7,5 @@ export const policyRuleSchema = z.object({
 
 export const policyDocumentSchema = z.object({
   package: z.string(),
-  rules: z.array(policyRuleSchema),
+  rules: z.array(policyRuleSchema).min(1, "Policy must have at least one rule"),
 });
