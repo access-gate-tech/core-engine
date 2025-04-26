@@ -64,6 +64,5 @@ We would like to thank all security researchers who have responsibly reported se
 
 ## Additional Resources
 
-- [Documentation](https://docs.accessgate.com)
-- [Issue Tracker](https://github.com/your-org/accessgate/issues)
+- [Issue Tracker](https://github.com/access-gate-tech/core-engine/issues)
 - [Contributing Guidelines](CONTRIBUTING.md)
