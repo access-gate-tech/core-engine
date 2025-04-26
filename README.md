@@ -1,7 +1,7 @@
 # AccessGate Core Engine
 
 [![CI](https://github.com/access-gate-tech/core-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/access-gate-tech/core-engine/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/access-gate-tech/core-engine/branch/main/graph/badge.svg)](https://codecov.io/gh/access-gate-tech/core-engine)
+[![codecov](https://codecov.io/gh/access-gate-tech/core-engine/graph/badge.svg?token=N7ENLQIYT9)](https://codecov.io/gh/access-gate-tech/core-engine)
 [![npm version](https://badge.fury.io/js/%40accessgate%2Fcore-engine.svg)](https://badge.fury.io/js/%40accessgate%2Fcore-engine)
 
 The core engine is a fundamental component of the AccessGate project, providing essential functionality and validation capabilities.
