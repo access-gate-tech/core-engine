@@ -1,13 +1,20 @@
 {
   "name": "@accessgate/core-engine",
   "version": "0.1.0",
+  "description": "Core engine for AccessGate project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "test": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "zod": "^3.22.4"
@@ -17,5 +24,19 @@
     "vitest": "^1.4.0",
     "@vitest/expect": "^1.4.0",
     "@vitest/coverage-v8": "^1.4.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/access-gate-tech/core-engine.git"
+  },
+  "keywords": [
+    "accessgate",
+    "core-engine",
+    "validation"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
 }
